@@ -9,7 +9,8 @@
 
         <hr/>
     <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <h3><a href="<%=request.getContextPath()%>/logout">Cerrar sesión</a></h3>  
+        <h3><sec:authentication property="principal.username" />
+            <a href="<%=request.getContextPath()%>/logout">Cerrar sesión</a></h3>  
     </c:if>
 </body>
 </html>
